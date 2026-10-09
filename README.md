@@ -18,6 +18,10 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
+## Enquiry email setup
+
+The enquiry form sends submissions through the server-side `/api/enquiry` route. Copy `.env.example` to `.env.local` and set `SMTP_USER`, `SMTP_APP_PASSWORD`, and `ENQUIRY_TO_EMAIL` to valid mail account credentials and the inbox that should receive enquiries. The defaults use Gmail SMTP on port 465; use a Google App Password, not your normal account password. Keep `.env.local` private and add the same variables to your deployment environment before publishing.
+
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
 ## Learn More

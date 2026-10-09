@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Brand } from "@/components/brand";
+import { EnquiryForm } from "@/components/enquiry-form";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -525,78 +526,7 @@ export default function Home() {
             </div>
 
             <div className="rounded-[26px] border border-slate-200 bg-white p-5 shadow-[0_18px_55px_-42px_rgba(11,39,77,0.32)] sm:p-8">
-              <form action="mailto:" method="post" encType="text/plain">
-                <div className="grid gap-4 sm:grid-cols-2">
-                  <label className="form-label">
-                    Full name
-                    <input
-                      className="form-control"
-                      name="name"
-                      placeholder="Your name"
-                      autoComplete="name"
-                      required
-                    />
-                  </label>
-                  <label className="form-label">
-                    Phone
-                    <input
-                      className="form-control"
-                      name="phone"
-                      type="tel"
-                      placeholder="Your phone number"
-                      autoComplete="tel"
-                      required
-                    />
-                  </label>
-                  <label className="form-label sm:col-span-2">
-                    Email
-                    <input
-                      className="form-control"
-                      name="email"
-                      type="email"
-                      placeholder="you@example.com"
-                      autoComplete="email"
-                      required
-                    />
-                  </label>
-                  <label className="form-label sm:col-span-2">
-                    Treatment of interest
-                    <select
-                      className="form-control"
-                      name="treatment"
-                      defaultValue=""
-                      required
-                    >
-                      <option value="" disabled>
-                        Choose a treatment
-                      </option>
-                      <option>Cardiac care</option>
-                      <option>Dental treatment</option>
-                      <option>Joint replacement</option>
-                      <option>Cosmetic & hair restoration</option>
-                      <option>Health check-up</option>
-                      <option>Wellness retreat</option>
-                    </select>
-                  </label>
-                  <label className="form-label sm:col-span-2">
-                    Tell us more
-                    <textarea
-                      className="form-control min-h-28 resize-y"
-                      name="message"
-                      placeholder="Your condition, reports you have, preferred dates…"
-                      rows={4}
-                    />
-                  </label>
-                </div>
-                <Button type="submit" size="lg" className="mt-5 w-full">
-                  Send my enquiry <ArrowRight size={16} />
-                </Button>
-                <p className="mt-3 text-center text-[11px] leading-5 text-muted">
-                  Your email app will open with your enquiry ready to send.
-                  Your information is never shared with third parties without
-                  your consent.
-                </p>
-              </form>
+              <EnquiryForm />
             </div>
           </div>
         </section>
